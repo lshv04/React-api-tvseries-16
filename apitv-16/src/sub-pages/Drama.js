@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const Drama = (networkCode) => {
-  console.log('Network code:', networkCode )
-  return <h1>Drama</h1>;
+const Drama = () => {
+  return (
+    <div>Drama</div>
+  )
+}
 
-};
-
-export default Drama;
+export default Drama

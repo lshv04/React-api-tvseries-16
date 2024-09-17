@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const Outros = (networkCode) => {
-  console.log('Network code:', networkCode )
-  return <h1>Outros</h1>;
+const Outros = () => {
+  return (
+    <div>Outros</div>
+  )
+}
 
-};
-
-export default Outros;
+export default Outros

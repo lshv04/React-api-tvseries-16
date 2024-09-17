@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const Comedia = (networkCode) => {
-  console.log('Network code:', networkCode )
-  return <h1>Comédia</h1>;
+const Comedia = () => {
+  return (
+    <div>Comedia</div>
+  )
+}
 
-};
-
-export default Comedia;
+export default Comedia

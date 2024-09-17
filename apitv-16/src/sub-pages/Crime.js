@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-const Crime = (networkCode) => {
-  console.log('Network code:', networkCode )
-  return <h1>Crime</h1>;
+const Crime = () => {
+  return (
+    <div>Crime</div>
+  )
+}
 
-};
-
-export default Crime;
+export default Crime
