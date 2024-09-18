@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import useFetch from '../hooks/useFetch';
 import { format } from 'date-fns';
-import { Pagination } from 'react-bootstrap'; // Importa o componente de paginação do React Bootstrap
+import { Pagination } from 'react-bootstrap'; 
+import Spinner from "react-bootstrap/Spinner";
 
 const options = {
   method: "GET",
@@ -23,12 +24,17 @@ function Acaoeaventura({ networkCode }) {
     setPage(newPage);
   };
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading)
+    return (
+      <div className="d-flex justify-content-center mt-5 pt-3">
+        <Spinner animation="border" variant="primary" />
+      </div>
+    );
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div>
-      <h1>Popular TV Shows</h1>
+     
       <div className="container">
         <h1 className="my-4 text-center">Ação e Aventura</h1>
         <div className="row">

@@ -1,38 +1,106 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-*{
+
+* {
   font-family: "Quicksand", system-ui;
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1;
+  background-color: var(--color0);
 }
-:root{
-  --color1:#ffc107;
-  --fontsize2:1.5rem;
+
+:root {
+  --color0: #f1f1f1;
+  --color1: #ffc107;
+  --color2: #161616;
+  --color3: #FF0000;
+  --fontsize1: 2rem;
+  --fontsize2: 1.5rem;
+
 }
+
 .img-fixed-size {
   width: 100%;
   height: 30rem;
   object-fit: cover;
 }
-.card{
+
+.card {
   border-radius: 0;
 }
+
 .text-truncate-multiline {
   display: -webkit-box;
-  -webkit-line-clamp: 5; /* Limitar a 3 linhas */
+  -webkit-line-clamp: 5;
+  /* Limitar a 3 linhas */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card-title{
+
+.card-title {
   font-weight: 900;
-  font-style:italic;
+  font-style: italic;
 }
-.rating{
-  color: var(--color1) ;
+
+.rating {
+  color: var(--color1);
   font-weight: 900;
   font-size: var(--fontsize2);
+}
+
+.navbar {
+  background-color: var(--color2)
+}
+
+.navlink,
+i {
+  color: var(--color0);
+  transition: color 0.3s ease;
+
+}
+
+.navbrand {
+  color: var(--color1);
+  font-style: oblique;
+}
+
+.navbrand:hover {
+  color: var(--color1);
+}
+
+.navlink:hover {
+  color: var(--color0);
+  text-decoration: underline;
+  text-decoration-color: var(--color1);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
+.navlink:focus,
+.navlink:active {
+  color: var(--color3);
+}
+
+.sticker {
+  display: flex;
+  gap: 1rem;
+}
+
+.sticker i {
+  font-size: var(--fontsize2);
+  transition: color 0.3s ease;
+}
+
+.sticker i:hover {
+  color: var(--color1);
+}
+
+.navbar-toggler-icon {
+  font-size: var(--fontsize1);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
