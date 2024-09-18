@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Netflix from "./pages/Netflix";
@@ -14,35 +14,18 @@ import Drama from "./sub-pages/Drama";
 import Misterio from "./sub-pages/Misterio";
 import Crime from "./sub-pages/Crime";
 import Outros from "./sub-pages/Outros";
+import NavbarMain from "./Components/Navbar";
 
 function App() {
  
   return (
+
     <Router>
+      
       <div>
-        {/* Navegação */}
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/sobre">Sobre</Link>
-            </li>
-            <li>
-              <Link to="/netflix">Netflix</Link>
-            </li>
-            <li>
-              <Link to="/primevideo">Prime Video</Link>
-            </li>
-            <li>
-              <Link to="/hbomax">HBO Max</Link>
-            </li>
-            <li>
-              <Link to="/appletv">Apple TV+</Link>
-            </li>
-          </ul>
-        </nav>
+      <NavbarMain/>
+       
+    
 
         {/* Rotas */}
         <Routes>

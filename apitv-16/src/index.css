@@ -8,6 +8,10 @@ body{
   padding: 0;
   background-color: #f1f1f1;
 }
+:root{
+  --color1:#ffc107;
+  --fontsize2:1.5rem;
+}
 .img-fixed-size {
   width: 100%;
   height: 30rem;
@@ -26,4 +30,9 @@ body{
 .card-title{
   font-weight: 900;
   font-style:italic;
+}
+.rating{
+  color: var(--color1) ;
+  font-weight: 900;
+  font-size: var(--fontsize2);
 }

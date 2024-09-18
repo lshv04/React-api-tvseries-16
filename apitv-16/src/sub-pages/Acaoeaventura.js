@@ -1,5 +1,7 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch';
+import { format } from 'date-fns';
+
 
 
 
@@ -11,6 +13,8 @@ const options = {
       "Bearer  eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMzgyYmRhY2FjYjkzYzAyM2M3Y2M3OTRmOTA2OWIwNiIsIm5iZiI6MTcyNjU5MjIyNy44NDE2Miwic3ViIjoiNjZlMDQzMTY1YTJkNTBkNzhjOGEzZDkxIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.FOjXHa7t4f5C_d2gr367z6XyaM47nQW84s6MCgxRssU",
   },
 };
+
+
 
 function Acaoeaventura(networkCode) {
   console.log(networkCode)
@@ -45,8 +49,8 @@ function Acaoeaventura(networkCode) {
                 
                 </div>
                 <div>
-                <p className="card-text mt-3">Primeiro episódio:{item.first_air_date}</p>
-                <p className="card-text mt-3"><small className="text-muted">Nota: {item.vote_average}</small></p>
+                <p className="card-text mt-3">Primeiro episódio: {format(new Date(item.first_air_date), 'dd/MM/yyyy')}</p>
+                <p className="card-text mt-3 rating ">Nota: {item.vote_average}</p>
                 </div>
               </div>
             </div>
