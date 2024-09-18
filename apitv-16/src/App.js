@@ -34,35 +34,35 @@ function App() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/netflix" element={<Netflix />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "213"/>} />
-            <Route path="comedia" element={<Comedia />} />
-            <Route path="drama" element={<Drama />} />
-            <Route path="misterio" element={<Misterio />} />
-            <Route path="crime" element={<Crime />} />
-            <Route path="outros" element={<Outros />} />
+            <Route path="comedia" element={<Comedia networkCode= "213"/>} />
+            <Route path="drama" element={<Drama networkCode= "213" />} />
+            <Route path="misterio" element={<Misterio networkCode= "213"/>} />
+            <Route path="crime" element={<Crime networkCode= "213"/>} />
+            <Route path="outros" element={<Outros networkCode= "213"/>} />
           </Route>
           <Route path="/primevideo" element={<Primevideo />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "1024"/>} />
-            <Route path="comedia" element={<Comedia />} />
-            <Route path="drama" element={<Drama />} />
-            <Route path="misterio" element={<Misterio />} />
-            <Route path="crime" element={<Crime />} />
-            <Route path="outros" element={<Outros />} />
+            <Route path="comedia" element={<Comedia networkCode= "1024"/>} />
+            <Route path="drama" element={<Drama networkCode= "1024"/>} />
+            <Route path="misterio" element={<Misterio networkCode= "1024"/>} />
+            <Route path="crime" element={<Crime networkCode= "1024"/>} />
+            <Route path="outros" element={<Outros networkCode= "1024"/>} />
           </Route>
           <Route path="/hbomax" element={<Hbomax />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "3186"/>} />
-            <Route path="comedia" element={<Comedia />} />
-            <Route path="drama" element={<Drama />} />
-            <Route path="misterio" element={<Misterio />} />
-            <Route path="crime" element={<Crime />} />
-            <Route path="outros" element={<Outros />} />
+            <Route path="comedia" element={<Comedia networkCode= "3186"/>} />
+            <Route path="drama" element={<Drama networkCode= "3186"/>} />
+            <Route path="misterio" element={<Misterio networkCode= "3186"/>} />
+            <Route path="crime" element={<Crime networkCode= "3186"/>} />
+            <Route path="outros" element={<Outros networkCode= "3186"/>} />
           </Route>
           <Route path="/appletv" element={<Appletv />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "2552"/>} />
-            <Route path="comedia" element={<Comedia />} />
-            <Route path="drama" element={<Drama />} />
-            <Route path="misterio" element={<Misterio />} />
-            <Route path="crime" element={<Crime />} />
-            <Route path="outros" element={<Outros />} />
+            <Route path="comedia" element={<Comedia networkCode= "2552"/>} />
+            <Route path="drama" element={<Drama networkCode= "2552"/>} />
+            <Route path="misterio" element={<Misterio networkCode= "2552"/>} />
+            <Route path="crime" element={<Crime networkCode= "2552"/>} />
+            <Route path="outros" element={<Outros networkCode= "2552"/>} />
           </Route>
    
         </Routes>
