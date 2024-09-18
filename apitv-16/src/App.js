@@ -13,8 +13,9 @@ import Comedia from "./sub-pages/Comedia";
 import Drama from "./sub-pages/Drama";
 import Misterio from "./sub-pages/Misterio";
 import Crime from "./sub-pages/Crime";
-import Outros from "./sub-pages/Outros";
+import Fantasiaescifi from "./sub-pages/Fantasiaescifi";
 import NavbarMain from "./Components/Navbar";
+
 
 function App() {
  
@@ -38,7 +39,7 @@ function App() {
             <Route path="drama" element={<Drama networkCode= "213" />} />
             <Route path="misterio" element={<Misterio networkCode= "213"/>} />
             <Route path="crime" element={<Crime networkCode= "213"/>} />
-            <Route path="outros" element={<Outros networkCode= "213"/>} />
+            <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "213"/>} />
           </Route>
           <Route path="/primevideo" element={<Primevideo />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "1024"/>} />
@@ -46,7 +47,7 @@ function App() {
             <Route path="drama" element={<Drama networkCode= "1024"/>} />
             <Route path="misterio" element={<Misterio networkCode= "1024"/>} />
             <Route path="crime" element={<Crime networkCode= "1024"/>} />
-            <Route path="outros" element={<Outros networkCode= "1024"/>} />
+            <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "1024"/>} />
           </Route>
           <Route path="/hbomax" element={<Hbomax />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "3186"/>} />
@@ -54,7 +55,7 @@ function App() {
             <Route path="drama" element={<Drama networkCode= "3186"/>} />
             <Route path="misterio" element={<Misterio networkCode= "3186"/>} />
             <Route path="crime" element={<Crime networkCode= "3186"/>} />
-            <Route path="outros" element={<Outros networkCode= "3186"/>} />
+            <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "3186"/>} />
           </Route>
           <Route path="/appletv" element={<Appletv />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "2552"/>} />
@@ -62,7 +63,7 @@ function App() {
             <Route path="drama" element={<Drama networkCode= "2552"/>} />
             <Route path="misterio" element={<Misterio networkCode= "2552"/>} />
             <Route path="crime" element={<Crime networkCode= "2552"/>} />
-            <Route path="outros" element={<Outros networkCode= "2552"/>} />
+            <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "2552"/>} />
           </Route>
    
         </Routes>

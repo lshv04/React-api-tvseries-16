@@ -12,7 +12,7 @@ const Netflix = () => {
           <li><Link to="drama">Drama</Link></li>
           <li><Link to="misterio">Mistério</Link></li>
           <li><Link to="crime">Crime</Link></li>
-          <li><Link to="outros">Outros</Link></li>
+          <li><Link to="fantasiaescifi">Fantasia e Sci-fi</Link></li>
         </ul>
       </nav>
       <Outlet />

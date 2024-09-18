@@ -18,11 +18,11 @@ function NavbarMain() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link as={Link} to="/" className='navlink'>Home</Nav.Link>
-            <Nav.Link as={Link} to="/sobre" className='navlink'>Sobre</Nav.Link>
             <Nav.Link as={Link} to="/netflix" className='navlink'>Netflix</Nav.Link>
             <Nav.Link as={Link} to="/primevideo" className='navlink'>Prime Video</Nav.Link>
             <Nav.Link as={Link} to="/hbomax" className='navlink'>HBO Max</Nav.Link>
             <Nav.Link as={Link} to="/appletv" className='navlink'>Apple TV+</Nav.Link>
+            <Nav.Link as={Link} to="/sobre" className='navlink'>Sobre</Nav.Link>
           </Nav>
           <div className="sticker">
             <a href="https://www.linkedin.com/in/leandrohosken/" target="_blank" rel="noopener noreferrer">
