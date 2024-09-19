@@ -15,6 +15,7 @@ body {
   --color1: #ffc107;
   --color2: #161616;
   --color3: #FF0000;
+  --fontsize0:0.5rem;
   --fontsize: 1rem;
   --fontsize1: 2rem;
   --fontsize2: 1.5rem;
@@ -144,7 +145,24 @@ i {
   flex-direction: column;
   align-items: center;
 }
+.inputcontainer{
+  display: flex;
 
+  justify-content: center;
+
+}
+.formcontainer{
+  display: flex;
+  flex-direction: row;
+  gap:var(--fontsize0);
+}
+.form-control{
+  margin: 0;
+  border-radius: 0 ;
+}
+.btn{
+  border-radius: 0 ;
+}
 @media (max-width: 768px) {
 
 

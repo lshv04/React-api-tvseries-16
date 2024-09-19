@@ -8,38 +8,59 @@ const options = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMzgyYmRhY2FjYjkzYzAyM2M3Y2M3OTRmOTA2OWIwNiIsIm5iZiI6MTcyNjU5MjIyNy44NDE2Miwic3ViIjoiNjZlMDQzMTY1YTJkNTBkNzhjOGEzZDkxIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.FOjXHa7t4f5C_d2gr367z6XyaM47nQW84s6MCgxRssU",
+    Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMzgyYmRhY2FjYjkzYzAyM2M3Y2M3OTRmOTA2OWIwNiIsIm5iZiI6MTcyNjY4MTQ0OC4zODg0MTcsInN1YiI6IjY2ZTA0MzE2NWEyZDUwZDc4YzhhM2Q5MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xmi9u_jsuPYtpdMYK_I_iEJdMP7PTqEt9T8pkR2oSQA",
   },
 };
 
-function Comedia({ networkCode }) {
+function TextInput() {
+  const [inputValue, setInputValue] = useState('');
+  const [submittedValue, setSubmittedValue] = useState('');
   const [page, setPage] = useState(1);
-
-  const { data, loading, error } = useFetch(
-    `https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=pt-BR&page=${page}&sort_by=popularity.desc&with_genres=35&with_networks=${networkCode}`,
-    options
-  );
 
   const handlePageChange = (newPage) => {
     setPage(newPage);
   };
 
-  if (loading)
-    return (
-      <div className="d-flex justify-content-center mt-5 pt-3">
-        <Spinner animation="border" variant="primary" />
-      </div>
-    );
-  if (error) return <p>Error: {error}</p>;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmittedValue(inputValue);
+  };
+
+  const { data, loading, error } = useFetch(
+    `https://api.themoviedb.org/3/search/tv?query=${submittedValue}&include_adult=false&language=pt-BR&page=${page}`,
+    options
+  );
 
   return (
     <div>
-     
       <div className="container">
-     
+      
+
+        {/* Input e botão de submit */}
+        <div className="inputcontainer">
+        <form onSubmit={handleSubmit} className="mb-4 formcontainer">
+          <input
+            type="text"
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Digite algo..."
+            className="form-control "
+          />
+          <button type="submit" className="btn btn-primary">Enviar</button>
+        </form>
+        </div>
+
+
+        {/* Exibe carregando ou erro */}
+        {loading && (
+          <div className="d-flex justify-content-center m-5 pt-3">
+            <Spinner animation="border" variant="primary" />
+          </div>
+        )}
+        {error && <p>Error: {error}</p>}
+
         <div className="row">
-          {data.results.map((item) => {
-            // Verifica se a data está definida e é válida
+          {data && data.results.map((item) => {
             const isValidDate = item.first_air_date && !isNaN(new Date(item.first_air_date).getTime());
             const formattedDate = isValidDate ? format(new Date(item.first_air_date), 'dd/MM/yyyy') : 'Data inválida';
 
@@ -62,7 +83,7 @@ function Comedia({ networkCode }) {
             );
           })}
         </div>
-        
+
         {/* Adiciona o componente de paginação e centraliza */}
         <div className="d-flex justify-content-center my-4">
           <Pagination>
@@ -78,4 +99,4 @@ function Comedia({ networkCode }) {
   );
 }
 
-export default Comedia;
+export default TextInput;

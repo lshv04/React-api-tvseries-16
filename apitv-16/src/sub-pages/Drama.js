@@ -36,7 +36,7 @@ function Drama({ networkCode }) {
     <div>
      
       <div className="container">
-        <h1 className="my-4 text-center">Drama</h1>
+
         <div className="row">
           {data.results.map((item) => {
             // Verifica se a data está definida e é válida
