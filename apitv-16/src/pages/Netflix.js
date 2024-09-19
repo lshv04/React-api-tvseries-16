@@ -1,18 +1,65 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Netflix = () => {
   return (
-    <div>
-      <h1>Netflix</h1>
+    <div className="container networkpages">
+      <img
+        src="/Netflix_2015_logo.svg.png"
+        alt="Netflix TV logo"
+        className="networklogo"
+      />
+
       <nav>
-        <ul>
-          <li><Link to="acaoeaventura">Ação e Aventura</Link></li>
-          <li><Link to="comedia">Comédia</Link></li>
-          <li><Link to="drama">Drama</Link></li>
-          <li><Link to="misterio">Mistério</Link></li>
-          <li><Link to="crime">Crime</Link></li>
-          <li><Link to="fantasiaescifi">Fantasia e Sci-fi</Link></li>
+        <ul className="nav2">
+          <li>
+            <NavLink
+              to="acaoeaventura"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Ação e Aventura
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="comedia"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Comédia
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="drama"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Drama
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="misterio"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Mistério
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="crime"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Crime
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="fantasiaescifi"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              Fantasia e Sci-fi
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <Outlet />

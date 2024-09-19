@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate} from "react-router-dom";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Netflix from "./pages/Netflix";
@@ -40,6 +40,7 @@ function App() {
             <Route path="misterio" element={<Misterio networkCode= "213"/>} />
             <Route path="crime" element={<Crime networkCode= "213"/>} />
             <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "213"/>} />
+            <Route index element={<Navigate to="acaoeaventura" />} />
           </Route>
           <Route path="/primevideo" element={<Primevideo />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "1024"/>} />
@@ -48,6 +49,7 @@ function App() {
             <Route path="misterio" element={<Misterio networkCode= "1024"/>} />
             <Route path="crime" element={<Crime networkCode= "1024"/>} />
             <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "1024"/>} />
+            <Route index element={<Navigate to="acaoeaventura" />} />
           </Route>
           <Route path="/hbomax" element={<Hbomax />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "3186"/>} />
@@ -56,6 +58,7 @@ function App() {
             <Route path="misterio" element={<Misterio networkCode= "3186"/>} />
             <Route path="crime" element={<Crime networkCode= "3186"/>} />
             <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "3186"/>} />
+            <Route index element={<Navigate to="acaoeaventura" />} />
           </Route>
           <Route path="/appletv" element={<Appletv />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "2552"/>} />
@@ -64,6 +67,7 @@ function App() {
             <Route path="misterio" element={<Misterio networkCode= "2552"/>} />
             <Route path="crime" element={<Crime networkCode= "2552"/>} />
             <Route path="Fantasiaescifi" element={<Fantasiaescifi networkCode= "2552"/>} />
+            <Route index element={<Navigate to="acaoeaventura" />} />
           </Route>
    
         </Routes>
