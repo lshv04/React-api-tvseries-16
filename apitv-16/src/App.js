@@ -15,6 +15,7 @@ import Misterio from "./sub-pages/Misterio";
 import Crime from "./sub-pages/Crime";
 import Fantasiaescifi from "./sub-pages/Fantasiaescifi";
 import NavbarMain from "./Components/Navbar";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
           </Route>
    
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

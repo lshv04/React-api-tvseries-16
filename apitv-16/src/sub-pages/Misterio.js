@@ -36,7 +36,7 @@ function Misterio({ networkCode }) {
     <div>
      
       <div className="container">
-        <h1 className="my-4 text-center">Mistério</h1>
+       
         <div className="row">
           {data.results.map((item) => {
             // Verifica se a data está definida e é válida
@@ -53,7 +53,7 @@ function Misterio({ networkCode }) {
                       <p className="card-text text-truncate-multiline">{item.overview}</p>
                     </div>
                     <div>
-                      <p className="card-text mt-3">Primeiro episódio: {formattedDate}</p>
+                      <p className="card-text mt-3">Lançamento: {formattedDate}</p>
                       <p className="card-text mt-3 rating">Nota: {item.vote_average}</p>
                     </div>
                   </div>

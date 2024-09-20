@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Sticker from './Sticker';
 
 function NavbarMain() {
   return (
-    <Navbar expand="lg" className='navbar'>
+    <Navbar expand="lg" className='navbar '>
       <Container>
-        <Navbar.Brand href="#home" className='navbrand'>Leandro Hosken</Navbar.Brand>
+        <Navbar.Brand href="#" className='navbrand'>Leandro Hosken</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon">
             <i className="bi bi-list"></i>
@@ -24,20 +25,7 @@ function NavbarMain() {
             <Nav.Link as={Link} to="/appletv" className='navlink'>Apple TV+</Nav.Link>
             <Nav.Link as={Link} to="/sobre" className='navlink'>Sobre</Nav.Link>
           </Nav>
-          <div className="sticker">
-            <a href="https://www.linkedin.com/in/leandrohosken/" target="_blank" rel="noopener noreferrer">
-              <span><i className="bi bi-linkedin"></i></span>
-            </a>
-            <a href="https://github.com/lshv04" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-github"></i>
-            </a>
-            <a href="https://wa.me/5531987670611" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-whatsapp"></i>
-            </a>
-            <a href="mailto:lshv04@gmail.com" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-envelope"></i>
-            </a>
-          </div>
+          <Sticker/>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -7,7 +7,24 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--color0);
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 100%) 0%,
+    hsl(344deg 0% 92%) 3%,
+    hsl(344deg 0% 84%) 7%,
+    hsl(344deg 0% 76%) 14%,
+    hsl(344deg 0% 68%) 28%,
+    hsl(344deg 0% 61%) 46%,
+    hsl(344deg 0% 53%) 59%,
+    hsl(344deg 0% 46%) 69%,
+    hsl(344deg 0% 39%) 77%,
+    hsl(344deg 0% 32%) 84%,
+    hsl(344deg 0% 26%) 90%,
+    hsl(344deg 0% 19%) 95%,
+    hsl(0deg 0% 13%) 100%
+  );
+
+
 }
 
 :root {
@@ -163,6 +180,83 @@ i {
 .btn{
   border-radius: 0 ;
 }
+
+.backimagehome {
+
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+
+.backimagehome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1; 
+}
+
+.backimagesobre {
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  color:white;
+  align-items: center;
+  
+}
+
+.backimagesobre::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1; 
+}
+.backimagesobre p,.backimagesobre i{
+  position: relative;
+  z-index: 2;
+  color: white; 
+}
+.sobre{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--fontsize1);
+}
+
+.imgtmdb{
+  position: relative;
+  z-index: 2;
+  width: 25rem;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+  background-color: var(--color2);
+  width: 100%;
+  gap: var(--fontsize);
+}
+
+footer h1{
+ font-size: var(--fontsize);
+ color: var(--color1);
+}
 @media (max-width: 768px) {
 
 
@@ -170,4 +264,13 @@ i {
     flex-direction: column;
 
   }
+  .imgtmdb{
+    width: 15rem;
+  }
+  footer{
+    display: flex;
+     flex-direction: column; 
+    gap: var(--fontsize0);
+  }
+ 
 }

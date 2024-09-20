@@ -53,7 +53,7 @@ function Fantasiaescifi({ networkCode }) {
                       <p className="card-text text-truncate-multiline">{item.overview}</p>
                     </div>
                     <div>
-                      <p className="card-text mt-3">Primeiro episódio: {formattedDate}</p>
+                      <p className="card-text mt-3">Lançamento: {formattedDate}</p>
                       <p className="card-text mt-3 rating">Nota: {item.vote_average}</p>
                     </div>
                   </div>

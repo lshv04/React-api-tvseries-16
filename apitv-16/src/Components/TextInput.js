@@ -43,7 +43,7 @@ function TextInput() {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Digite algo..."
+            placeholder="Procure suas séries..."
             className="form-control "
           />
           <button type="submit" className="btn btn-primary">Enviar</button>
