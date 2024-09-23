@@ -3,6 +3,7 @@ import useFetch from '../hooks/useFetch';
 import { format } from 'date-fns';
 import { Pagination } from 'react-bootstrap'; 
 import Spinner from "react-bootstrap/Spinner";
+import { Link } from 'react-router-dom';
 
 const options = {
   method: "GET",
@@ -13,6 +14,29 @@ const options = {
 };
 
 function Drama({ networkCode }) {
+
+  // Função para determinar a plataforma com base no networkCode
+  function getPlatformByNetworkCode(networkCode) {
+    let platform = 'teste';
+  
+    if (networkCode === 213) {
+      platform = 'netflix';
+    } else if (networkCode === 1024) {
+      platform = 'primevideo';
+    } else if (networkCode === 3186) {
+      platform = 'hbomax';
+    } else if (networkCode === 2552) {
+      platform = 'appletv';
+    }
+  
+    return platform;
+  }
+  
+  const platform = getPlatformByNetworkCode(Number(networkCode)); // Garante que networkCode seja um número
+  
+  console.log(`network code: ${networkCode}, platform: ${platform}`);
+  
+
   const [page, setPage] = useState(1);
 
   const { data, loading, error } = useFetch(
@@ -26,7 +50,7 @@ function Drama({ networkCode }) {
 
   if (loading)
     return (
-      <div className="d-flex justify-content-center mt-5 pt-3">
+      <div className="d-flex justify-content-center m-5 pt-3">
         <Spinner animation="border" variant="primary" />
       </div>
     );
@@ -34,9 +58,7 @@ function Drama({ networkCode }) {
 
   return (
     <div>
-     
       <div className="container">
-
         <div className="row">
           {data.results.map((item) => {
             // Verifica se a data está definida e é válida
@@ -54,7 +76,12 @@ function Drama({ networkCode }) {
                     </div>
                     <div>
                       <p className="card-text mt-3">Lançamento: {formattedDate}</p>
+                      <div className='notaedetalhes'>
                       <p className="card-text mt-3 rating">Nota: {item.vote_average}</p>
+                   
+                
+                      <Link to={`/${platform}/drama/${item.id}`} className='detalhes'>Detalhes </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
