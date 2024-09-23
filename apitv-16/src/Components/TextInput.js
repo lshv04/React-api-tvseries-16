@@ -3,6 +3,7 @@ import useFetch from '../hooks/useFetch';
 import { format } from 'date-fns';
 import { Pagination } from 'react-bootstrap'; 
 import Spinner from "react-bootstrap/Spinner";
+import { Link } from 'react-router-dom';
 
 const options = {
   method: "GET",
@@ -33,6 +34,7 @@ function TextInput() {
 
   return (
     <div>
+      
       <div className="container">
       
 
@@ -75,7 +77,12 @@ function TextInput() {
                     </div>
                     <div>
                       <p className="card-text mt-3">Primeiro episódio: {formattedDate}</p>
+                      <div className='notaedetalhes'>
                       <p className="card-text mt-3 rating">Nota: {item.vote_average}</p>
+                   
+                
+                      <Link to={`${item.id}`} className='detalhes'>Detalhes </Link>
+                      </div>
                     </div>
                   </div>
                 </div>

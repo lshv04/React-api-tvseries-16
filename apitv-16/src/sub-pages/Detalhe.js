@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
+import { format } from "date-fns"; 
 import useFetch from "../hooks/useFetch";
 
 const options = {
@@ -14,15 +15,13 @@ const options = {
 const Detalhe = () => {
   const { id } = useParams();
 
-  // Construir a URL dinamicamente com base no ID
+
   const url = `https://api.themoviedb.org/3/tv/${id}?language=pt-BR`;
 
-  // Opções para o fetch com o token de autorização
 
-  // Usar o hook useFetch para buscar os dados
   const { data, loading, error } = useFetch(url, options);
 
-  // Renderização condicional
+
   if (loading)
     return (
       <div className="d-flex justify-content-center m-5 pt-3">
@@ -31,54 +30,61 @@ const Detalhe = () => {
     );
   if (error) return <p>Error: {error}</p>;
 
+  // Função para formatar datas
+  const formatDate = (date) => {
+    const parsedDate = new Date(date);
+    return !isNaN(parsedDate.getTime())
+      ? format(parsedDate, "dd/MM/yyyy")
+      : "Data inválida";
+  };
+
   return (
     <div className="container">
-      {/* Renderizar os dados da API */}
       {data && (
         <div>
-          <div className=" detailscontainer  py-5 mb-5">
-            <div className="imgcontainer ">
+          <div className="detailscontainer py-5 mb-5">
+            <div className="imgcontainer">
               <img
                 src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
                 alt={data.name}
                 className="img-fluid"
               />
             </div>
-            <div className="itenscontainer  p-3">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${data.networks[0].logo_path}`}
-                alt={data.name}
-                className="networklogo"
-              />
+            <div className="itenscontainer p-3">
+              <div className="logocontainer">
+              {data.networks && data.networks.length > 0 ? (
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${data.networks[0].logo_path}`}
+                  alt={data.name}
+                  className="networklogo"
+                />
+              ) : (
+                <p>Nenhum logo disponível</p> 
+              )}
+              </div>
               <h2 className="fw-bold">{data.name}</h2>
               <p className="fw-bold">Sinopse: {data.overview}</p>
-              <p className="fw-bold">Data de estreia: {data.first_air_date}</p>
+              <p className="fw-bold">Data de estreia: {formatDate(data.first_air_date)}</p>
               <p className="fw-bold">
-                Data do útimo episódio a ir ao ar: {data.last_air_date}
+                Data do último episódio a ir ao ar: {formatDate(data.last_air_date)}
               </p>
               <p className="fw-bold">
                 Último episódio a ir ao ar: {data.last_episode_to_air.name}
               </p>
-              <p className="fw-bold">
-                Número de temporadas: {data.number_of_seasons}
-              </p>
-              <p className="fw-bold">
-                Número de episódios: {data.number_of_episodes}
-              </p>
+              <p className="fw-bold">Número de temporadas: {data.number_of_seasons}</p>
+              <p className="fw-bold">Número de episódios: {data.number_of_episodes}</p>
               <p className="fw-bold">
                 Data do próximo episódio:{" "}
                 {data.next_episode_to_air
-                  ? data.next_episode_to_air.air_date
-                  : "Nenhum próximo episódio"}
+                  ? formatDate(data.next_episode_to_air.air_date)
+                  : "Nenhum próximo episódio anunciado"}
               </p>
               <p className="fw-bold">País de origem: {data.origin_country}</p>
-              <p className="fw-bold">
-                Língua de origem: {data.original_language}{" "}
-              </p>
+              <p className="fw-bold">Língua de origem: {data.original_language}</p>
               <p className="fw-bold">Nome original: {data.original_name}</p>
               <p className="fw-bold">Status: {data.status}</p>
-              <p className="fw-bold">Nota: {data.vote_average} </p>
-              <p className="fw-bold">Número de votos: {data.vote_count} </p>
+              <p className="fw-bold">Nota: {data.vote_average}</p>
+              <p className="fw-bold">Número de votos: {data.vote_count}</p>
             </div>
           </div>
         </div>

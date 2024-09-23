@@ -34,6 +34,7 @@ function App() {
         <Routes>
           
           <Route path="/" element={<Home />} />
+          <Route path="/:id" element={<Detalhe/>} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/netflix" element={<Netflix />}>
             <Route path="acaoeaventura" element={<Acaoeaventura networkCode= "213"/>} />
