@@ -5,7 +5,7 @@ const Netflix = () => {
   return (
     <div className="container networkpages">
       <img
-        src="/Netflix_2015_logo.svg.png"
+        src={`${process.env.PUBLIC_URL}/Netflix_2015_logo.svg.png`}
         alt="Netflix TV logo"
         className="networklogo"
       />

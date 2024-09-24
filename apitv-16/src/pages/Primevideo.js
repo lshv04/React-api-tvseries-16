@@ -5,7 +5,7 @@ const Primevideo = () => {
   return (
     <div className="container networkpages">
       <img
-        src="/Amazon_Prime_Video_logo.svg.png"
+        src={`${process.env.PUBLIC_URL}/Amazon_Prime_Video_logo.svg.png`}
         alt="Prime Video TV logo"
         className="networklogo"
       />

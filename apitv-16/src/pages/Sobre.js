@@ -14,7 +14,7 @@ const Sobre = () => {
           <div className='imgtmdb'>
           <a href="https://developer.themoviedb.org/docs/getting-started" target="_blank" rel="noopener noreferrer">
         <img 
-          src="/logotmdb.svg" 
+          src={`${process.env.PUBLIC_URL}/logotmdb.svg`} 
           alt="Logo TMDB" 
     
         />

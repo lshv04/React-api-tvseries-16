@@ -5,7 +5,7 @@ const Hbomax = () => {
   return (
     <div className="container networkpages">
       <img
-        src="/HBO_Max_Logo.svg.png "
+          src={`${process.env.PUBLIC_URL}/HBO_Max_Logo.svg.png`}
         alt="Apple TV logo"
         className="networklogo"
       />

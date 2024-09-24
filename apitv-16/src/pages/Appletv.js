@@ -5,7 +5,7 @@ const Appletv = () => {
   return (
     <div className="container networkpages">
       <img
-        src="/Apple_TV_Plus_Logo.svg.png"
+          src={`${process.env.PUBLIC_URL}/Apple_TV_Plus_Logo.svg.png`}
         alt="Apple TV logo"
         className="networklogo"
       />
