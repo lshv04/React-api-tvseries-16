@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-api-tvseries-16/static/css/main.ca48e371.css",
-    "main.js": "/React-api-tvseries-16/static/js/main.fc1eccb0.js",
+    "main.js": "/React-api-tvseries-16/static/js/main.e0ccb8e9.js",
     "static/js/453.66c074d8.chunk.js": "/React-api-tvseries-16/static/js/453.66c074d8.chunk.js",
     "static/media/BestShows.webp": "/React-api-tvseries-16/static/media/BestShows.e659a7510b224e4d8e24.webp",
     "static/media/bootstrap-icons.woff?": "/React-api-tvseries-16/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
@@ -9,11 +9,11 @@
     "static/media/sopranos.jpg": "/React-api-tvseries-16/static/media/sopranos.eaca0b2e75eefc94ac51.jpg",
     "index.html": "/React-api-tvseries-16/index.html",
     "main.ca48e371.css.map": "/React-api-tvseries-16/static/css/main.ca48e371.css.map",
-    "main.fc1eccb0.js.map": "/React-api-tvseries-16/static/js/main.fc1eccb0.js.map",
+    "main.e0ccb8e9.js.map": "/React-api-tvseries-16/static/js/main.e0ccb8e9.js.map",
     "453.66c074d8.chunk.js.map": "/React-api-tvseries-16/static/js/453.66c074d8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ca48e371.css",
-    "static/js/main.fc1eccb0.js"
+    "static/js/main.e0ccb8e9.js"
   ]
 }
