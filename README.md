@@ -56,7 +56,7 @@ Mobile
 
 
 Buscador
-https://github.com/user-attachments/assets/34f05ae4-6e0b-4546-9fa8-b4abb990196a
+https://github.com/user-attachments/assets/34f05ae4-6e0b-4546-9fa8-b4abb990196a  
 Paginação geral
 https://github.com/user-attachments/assets/ccc8defd-a557-4067-946e-95ed9d5bcb85
 
