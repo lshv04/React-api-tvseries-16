@@ -33,9 +33,9 @@ function TextInput() {
   );
 
   return (
-    <div>
+    <div >
       
-      <div className="container">
+      <div className="container  ">
       
 
         {/* Input e botão de submit */}
