@@ -336,6 +336,11 @@ footer h1 {
   .imgcontainer {
     margin-top: 0;
   }
+  .home{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
 }
 
 @media (max-width: 1025px) {
